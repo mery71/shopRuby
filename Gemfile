@@ -27,7 +27,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'sdoc', '~> 1.0.0', group: :doc
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '~> 3.4.1'
  gem 'jquery-rails'
  gem 'autoprefixer-rails'
  gem 'devise'
