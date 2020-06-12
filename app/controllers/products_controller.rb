@@ -1,7 +1,10 @@
 class ProductsController < ApplicationController
+  # tải dl vào biến đối tượng và tự động ủy quyền cho mọi hành động trong products_controller
   load_and_authorize_resource
+  # Thực hiện  method set_product trước khi thực hiện những method sau đó
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  # người dùng chưa đăng nhập chỉ có xem trang index và ds sản phẩm
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @products = Product.all
   end
